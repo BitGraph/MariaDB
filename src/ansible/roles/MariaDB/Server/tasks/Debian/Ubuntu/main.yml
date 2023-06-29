@@ -1,0 +1,15 @@
+# by.ChatGPT: "Can you make me an Ansible playbook to install MariaDB on Debian?"
+
+- name: Install MariaDB server
+  apt:
+    name: mariadb-server
+    state: present
+    update_cache: yes
+  become: yes
+
+- name: Start MariaDB service
+  service:
+    name: mysql
+    state: started
+    enabled: yes
+  become: yes

@@ -1,0 +1,6 @@
+- name: Install MariaDB client
+  apt:
+    name: mariadb-client
+    state: present
+    update_cache: yes
+  become: yes
