@@ -1,0 +1,14 @@
+- name: Install mysql-connector with pipx
+  ansible.builtin.shell: pipx install mysql-connector-python
+  args:
+    chdir: somedir/
+    creates: somelog.txt
+  # become: true
+
+- name: Install mysql-connector with pip3
+  ansible.builtin.shell: pip3 install mysql-connector-python
+  args:
+    creates: somelog.txt
+
+- debug:
+    msg: "Todo! Neither one works!!!"

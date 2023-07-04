@@ -1,6 +1,15 @@
-- name: Install Python MySQL Library
+- name: Install Pipx
   ansible.builtin.apt:
     pkg:
-    - python3-mysqldb
-    - python3-mysql.connector
+    - pipx
   become: yes
+
+- include_tasks: common/pipx/main.yml
+
+# Obsolete
+# - name: Install Python MySQL Library
+#   ansible.builtin.apt:
+#     pkg:
+#     - python3-mysqldb
+#     - python3-mysql.connector
+#   become: yes
