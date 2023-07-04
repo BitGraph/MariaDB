@@ -1,0 +1,6 @@
+- name: Install Python MySQL Library
+  ansible.builtin.apt:
+    pkg:
+    - python3-mysqldb
+    - python3-mysql.connector
+  become: yes

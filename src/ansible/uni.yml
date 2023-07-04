@@ -7,3 +7,4 @@
   roles:
   - MariaDB/Server
   - MariaDB/Client
+  - Language/Python
